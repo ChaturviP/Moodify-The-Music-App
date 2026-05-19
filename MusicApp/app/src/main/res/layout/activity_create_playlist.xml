@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Playlist"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Build your vibe collection 🎧"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="6dp" />
+
+        <!-- Cover -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="28dp"
+            app:cardCornerRadius="26dp"
+            app:cardBackgroundColor="@color/card">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="32dp"
+                android:src="@android:drawable/ic_menu_gallery" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Name -->
+        <EditText
+            android:id="@+id/playlistName"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/input_bg"
+            android:hint="Playlist Name"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:paddingHorizontal="18dp" />
+
+        <!-- ✅ FIXED ID -->
+        <EditText
+            android:id="@+id/playlistDescription"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="18dp"
+            android:gravity="top"
+            android:background="@drawable/input_bg"
+            android:hint="Description"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:padding="18dp" />
+
+        <!-- Mood -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Mood"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="26dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="14dp">
+
+            <!-- ✅ FIXED IDS -->
+            <Button
+                android:id="@+id/chillBtn"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="Chill"
+                android:textColor="#000000"
+                android:backgroundTint="@color/primary" />
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="1dp" />
+
+            <Button
+                android:id="@+id/gymBtn"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="Gym"
+                android:textColor="#000000"
+                android:backgroundTint="@color/card" />
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="1dp" />
+
+            <Button
+                android:id="@+id/partyBtn"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="Party"
+                android:textColor="#000000"
+                android:backgroundTint="@color/card" />
+
+        </LinearLayout>
+
+        <!-- Button -->
+        <Button
+            android:id="@+id/savePlaylistBtn"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="34dp"
+            android:text="Create Playlist"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:backgroundTint="@color/primary" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+    </LinearLayout>
+
+</ScrollView>

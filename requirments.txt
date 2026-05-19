@@ -1,0 +1,6 @@
+Kotlin
+Firebase Authentication
+RecyclerView
+SharedPreferences
+Material Design Components
+Android Studio

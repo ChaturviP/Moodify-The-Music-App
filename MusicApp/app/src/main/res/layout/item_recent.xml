@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="92dp"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/card">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp">
+
+        <!-- Album Cover -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            app:cardCornerRadius="18dp">
+
+            <ImageView
+                android:id="@+id/recentImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/blinding_lights" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Song Info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/recentTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blinding Lights"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/recentSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The Weeknd"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+        <!-- 🔥 REMOVE BUTTON (NEW) -->
+        <ImageView
+            android:id="@+id/addToPlaylistBtnRecent"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_input_add"
+            android:layout_marginEnd="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:tint="@android:color/holo_green_light" />
+
+        <!-- Favorite -->
+        <ImageView
+            android:id="@+id/favBtn"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginEnd="14dp"
+            android:src="@android:drawable/btn_star_big_off" />
+
+        <!-- Play -->
+        <ImageView
+            android:id="@+id/playBtnRecent"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@android:drawable/ic_media_play" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Main Background -->
+    <color name="background">#0D0D0D</color>
+
+    <!-- Cards -->
+    <color name="card">#1A1A1A</color>
+
+    <!-- Primary Green -->
+    <color name="primary">#1DB954</color>
+    <color name="primary_dark">#159943</color>
+
+    <!-- Hero Gradient -->
+    <color name="gradient_start">#0D8A3D</color>
+    <color name="gradient_end">#1DB954</color>
+
+    <!-- Text -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#A0A0A0</color>
+
+    <!-- Divider -->
+    <color name="divider">#2A2A2A</color>
+
+</resources>

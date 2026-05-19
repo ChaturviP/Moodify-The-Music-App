@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NOW PLAYING"
+            android:textColor="@color/text_secondary"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Album Art -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="34dp"
+            app:cardElevation="10dp"
+            app:cardBackgroundColor="@color/card">
+
+            <ImageView
+                android:id="@+id/playerImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:padding="70dp"
+                android:src="@android:drawable/ic_media_play"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Song -->
+        <TextView
+            android:id="@+id/playerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blinding Lights"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:layout_marginTop="28dp"/>
+
+        <TextView
+            android:id="@+id/playerArtist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Weeknd"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp"
+            android:layout_marginTop="6dp"/>
+
+        <!-- Seekbar -->
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:progressTint="@color/primary"
+            android:thumbTint="@color/primary"/>
+
+        <!-- Time -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/currentTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0:00"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/totalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0:00"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+        <!-- Controls -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp">
+
+            <!-- Prev -->
+            <ImageView
+                android:id="@+id/prevBtn"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginEnd="34dp"
+                android:src="@android:drawable/ic_media_previous"/>
+
+            <!-- Play -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="86dp"
+                android:layout_height="86dp"
+                app:cardCornerRadius="43dp"
+                app:cardBackgroundColor="@color/primary"
+                app:cardElevation="8dp">
+
+                <ImageView
+                    android:id="@+id/playBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="24dp"
+                    android:src="@android:drawable/ic_media_play"/>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Next -->
+            <ImageView
+                android:id="@+id/nextBtn"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="34dp"
+                android:src="@android:drawable/ic_media_next"/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

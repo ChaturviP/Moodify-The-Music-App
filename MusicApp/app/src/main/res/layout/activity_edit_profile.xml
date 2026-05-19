@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- 🔥 Avatar Preview -->
+        <ImageView
+            android:id="@+id/editProfileImage"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/profile_circle"
+            android:padding="12dp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- 🔥 Name -->
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Your Name"
+            android:textColor="@android:color/white"
+            android:textColorHint="#888"
+            android:background="@drawable/edit_text_bg"
+            android:padding="14dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 🔥 Bio -->
+        <EditText
+            android:id="@+id/editBio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Your Bio"
+            android:textColor="@android:color/white"
+            android:textColorHint="#888"
+            android:background="@drawable/edit_text_bg"
+            android:padding="14dp"
+            android:minLines="3"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- 🔥 Save Button -->
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Save Changes"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#1DB954"
+            android:background="@drawable/rounded_button"/>
+
+    </LinearLayout>
+
+</ScrollView>

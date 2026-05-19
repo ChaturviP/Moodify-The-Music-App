@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="28dp"
+        android:gravity="center_vertical">
+
+        <!-- Logo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MUSICIFY"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary"
+            android:letterSpacing="0.08"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create your account."
+            android:textSize="18sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Email -->
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="38dp"
+            android:background="@drawable/input_bg"
+            android:hint="Email Address"
+            android:paddingHorizontal="18dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:inputType="textEmailAddress"/>
+
+        <!-- Password -->
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/input_bg"
+            android:hint="Password"
+            android:paddingHorizontal="18dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:inputType="textPassword"/>
+
+        <!-- Confirm Password -->
+        <EditText
+            android:id="@+id/confirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/input_bg"
+            android:hint="Confirm Password"
+            android:paddingHorizontal="18dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:inputType="textPassword"/>
+
+        <!-- Sign Up -->
+        <Button
+            android:id="@+id/signupBtn"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="28dp"
+            android:text="Create Account"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:backgroundTint="@color/primary"/>
+
+        <!-- Divider -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="or continue with"
+            android:textColor="@color/text_secondary"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"/>
+
+        <!-- Google -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Google"
+            android:textColor="@color/text_primary"
+            android:backgroundTint="@color/card"
+            android:layout_marginTop="14dp"/>
+
+        <!-- Login -->
+        <TextView
+            android:id="@+id/loginText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? Login"
+            android:textColor="@color/primary"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

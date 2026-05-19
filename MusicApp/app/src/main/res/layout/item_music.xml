@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="155dp"
+    android:layout_height="190dp"
+    android:layout_marginEnd="14dp"
+    app:cardCornerRadius="22dp"
+    app:cardElevation="5dp"
+    app:cardBackgroundColor="@color/card">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 🔥 IMAGE + BUTTON -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+            <!-- Song Image -->
+            <ImageView
+                android:id="@+id/songImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@android:drawable/ic_media_play"/>
+
+            <!-- 🔥 ADD TO PLAYLIST BUTTON -->
+            <ImageView
+                android:id="@+id/addToPlaylistBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="8dp"
+                android:background="@drawable/profile_circle"
+                android:padding="6dp"
+                android:src="@android:drawable/ic_input_add" />
+
+        </FrameLayout>
+
+        <!-- TEXT SECTION -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/songTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Song"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/songSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Artist"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

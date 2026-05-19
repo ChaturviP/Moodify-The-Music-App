@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1033414030521",
+    "project_id": "moodify-45b9d",
+    "storage_bucket": "moodify-45b9d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033414030521:android:2784d4e85eeb1d29791768",
+        "android_client_info": {
+          "package_name": "com.example.musicapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1033414030521-vbf032835eopjbb7oh10n8ojhpvk9mjh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.musicapp",
+            "certificate_hash": "5977c588835e43086e75da37ccc755b06d6d93b0"
+          }
+        },
+        {
+          "client_id": "1033414030521-nvu6i9l9kn218els7qrauuqgitme8u1j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_L7l80ONfNVwNXYZBP2XEf_C3cR05GdU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1033414030521-nvu6i9l9kn218els7qrauuqgitme8u1j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
