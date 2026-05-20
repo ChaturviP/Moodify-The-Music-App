@@ -76,7 +76,7 @@ class EditProfileActivity : AppCompatActivity() {
 
                 db.collection("users")
                     .document(user.uid)
-                    .update(data as Map<String, Any>)
+                    .set(data)
                     .addOnSuccessListener {
 
                         Toast.makeText(

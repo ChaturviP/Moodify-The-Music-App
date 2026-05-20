@@ -1,5 +1,5 @@
 package com.example.musicapp
-
+import android.util.Patterns
 import android.content.Intent
 import android.os.Bundle
 import android.widget.*
@@ -29,44 +29,80 @@ class SignupActivity : AppCompatActivity() {
             val confirmText = confirmPassword.text.toString().trim()
 
             when {
-                emailText.isEmpty() -> email.error = "Enter email"
-                passText.length < 6 -> password.error = "Minimum 6 characters"
-                passText != confirmText ->
-                    confirmPassword.error = "Passwords do not match"
+
+                emailText.isEmpty() -> {
+                email.error = "Enter email"
+            }
+
+                !Patterns.EMAIL_ADDRESS.matcher(emailText).matches() -> {
+                email.error = "Enter valid email"
+            }
+
+                passText.isEmpty() -> {
+                password.error = "Enter password"
+            }
+
+                passText.length < 8 -> {
+                password.error =
+                    "Password must be at least 8 characters"
+            }
+
+                !passText.matches(Regex(".*[A-Z].*")) -> {
+                password.error =
+                    "Password must contain one uppercase letter"
+            }
+
+                !passText.matches(Regex(".*[0-9].*")) -> {
+                password.error =
+                    "Password must contain one number"
+            }
+
+                !passText.matches(
+                    Regex(".*[!@#\$%^&*()_+=|<>?{}\\[\\]~-].*")
+                ) -> {
+                password.error =
+                    "Password must contain one special character"
+            }
+
+                passText != confirmText -> {
+                confirmPassword.error =
+                    "Passwords do not match"
+            }
 
                 else -> {
 
-                    auth.createUserWithEmailAndPassword(
-                        emailText,
-                        passText
-                    ).addOnCompleteListener {
+                auth.createUserWithEmailAndPassword(
+                    emailText,
+                    passText
+                ).addOnCompleteListener {
 
-                        if (it.isSuccessful) {
+                    if (it.isSuccessful) {
 
-                            Toast.makeText(
+                        Toast.makeText(
+                            this,
+                            "Account Created",
+                            Toast.LENGTH_SHORT
+                        ).show()
+
+                        startActivity(
+                            Intent(
                                 this,
-                                "Account Created",
-                                Toast.LENGTH_SHORT
-                            ).show()
-
-                            startActivity(
-                                Intent(
-                                    this,
-                                    HomeActivity::class.java
-                                )
+                                HomeActivity::class.java
                             )
-                            finish()
+                        )
 
-                        } else {
+                        finish()
 
-                            Toast.makeText(
-                                this,
-                                it.exception?.message,
-                                Toast.LENGTH_LONG
-                            ).show()
-                        }
+                    } else {
+
+                        Toast.makeText(
+                            this,
+                            it.exception?.message,
+                            Toast.LENGTH_LONG
+                        ).show()
                     }
                 }
+            }
             }
         }
 

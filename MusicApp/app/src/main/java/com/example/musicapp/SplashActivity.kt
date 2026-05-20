@@ -5,24 +5,24 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 
 class SplashActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Optional: remove title bar flash
+        // Hide action bar
         supportActionBar?.hide()
 
         setContentView(R.layout.activity_splash)
 
-        val sharedPref = getSharedPreferences("MusicApp", MODE_PRIVATE)
-
         Handler(Looper.getMainLooper()).postDelayed({
 
-            val isLoggedIn = sharedPref.getBoolean("isLoggedIn", false)
+            // 🔥 Firebase session check
+            val user = FirebaseAuth.getInstance().currentUser
 
-            val nextScreen = if (isLoggedIn) {
+            val nextScreen = if (user != null) {
                 HomeActivity::class.java
             } else {
                 LoginActivity::class.java
@@ -31,6 +31,6 @@ class SplashActivity : AppCompatActivity() {
             startActivity(Intent(this, nextScreen))
             finish()
 
-        }, 1500) // slightly faster (feels better)
+        }, 1500)
     }
 }
